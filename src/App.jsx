@@ -17,17 +17,13 @@ function App() {
   }, [screen]);
 
   return (
-    <BrowserRouter>   
-      
-       
-     <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home2" element={<Home2/>}/>
-          </Routes>
-       
-      
-    </BrowserRouter>
+    <main>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home2" element={<Home2 />} />
+      </Routes>
+    </main>
   );
 }
 
