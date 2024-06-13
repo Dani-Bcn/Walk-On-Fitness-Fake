@@ -19,8 +19,6 @@ svg:hover{
   fill:rgb(226, 130, 66)
 }
 
-
-
 h2 {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
@@ -125,10 +123,19 @@ h5 {
   width: 90vw;
   gap:10
 }
+.wrapper-box{
+  align-items: start;
+}
+
 
  @media screen and (max-width: 550px) {
   .box {
     flex-direction: column;  
     gap: 10;
+    text-align: center;
+    justify-content: center;
+  }
+  .wrapper-box{
+    align-items: center;
   }
 }
