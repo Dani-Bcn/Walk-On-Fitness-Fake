@@ -11,8 +11,11 @@ import confident from "/assets/confident-fit-man.jpg";
 import fisioterapia from "/assets/fisioterapia.jpg";
 import bg2 from "/assets/bg2.png";
 import bg from "/assets/bg.png";
+import bg_black from "/assets/bg.jpg";
 import gsap from "gsap";
 import { motion as m } from "framer-motion";
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
 
 export default function Home() {
   useEffect(() => {
@@ -68,7 +71,7 @@ export default function Home() {
 
   buttonComencemos
     ? gsap.to(".buttonComencemos", {
-        x: 220,
+        x: 235,
       })
     : gsap.to(".buttonComencemos", {
         x: 0,
@@ -225,7 +228,7 @@ export default function Home() {
   }, 5000);
 
   return (
-    <main className="overflow-hidden w-screen bg-[rgb(20,20,20)] text-6xl flex flex-col gap-20 ">
+    <main className=" inicio overflow-hidden w-screen bg-[rgb(20,20,20)] text-6xl flex flex-col gap-20 ">
       <img
         src={back_Img}
         alt="back-img"
@@ -335,7 +338,7 @@ export default function Home() {
           <div className="w-full h-52 bg-gradient-to-r from-slate-400"></div>
         </div>
         <div className=" w-[100vw] flex flex-col gap-10 text-xl italic  text-white">
-          <h4 className=" ">NUESTRO EQUIPO</h4>
+          <h4 className="equipo ">NUESTRO EQUIPO</h4>
           <h2 className="text-5xl text-orange-400">
             TRANSFORMANDO VIDAS, FORJANDO RESULTADOS
           </h2>
@@ -354,9 +357,9 @@ export default function Home() {
           <button
             onPointerOver={() => setButtonMembers(true)}
             onPointerOut={() => setButtonMembers(false)}
-            className="w-44 rounded-md overflow-hidden h-16 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-2xl bg-orange-400   transiton-all duration-500 z-[200]"
+            className="w-52 rounded-md overflow-hidden h-16 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-2xl bg-orange-400   transiton-all duration-500 z-[200]"
           >
-            <div className="buttonMembers flex w-[600px] -ml-[165px] gap-32 ">
+            <div className="buttonMembers flex w-[600px] -ml-[155px] gap-32 ">
               <h3>Go!!!</h3>
               <h3>Hazte miembro</h3>
             </div>
@@ -390,7 +393,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className=" w-screen flex flex-col ">
+      <section className="servicios w-screen flex flex-col ">
         <div className="flex w-full h-96">
           <div className="flex w-1/2 h-96 p-10 flex-col gap-20 text-white text-xl justify-center">
             <h4>SERVICIOS</h4>
@@ -437,7 +440,6 @@ export default function Home() {
             <m.div
               initial={{ y: 200, opacity: 0 }}
               whileInView={{
-               
                 y: [200, 0],
                 opacity: [0, 1],
                 transition: {
@@ -471,7 +473,6 @@ export default function Home() {
           <m.div
             initial={{ y: 200, opacity: 0 }}
             whileInView={{
-             
               y: [200, 0],
               opacity: [0, 1],
               transition: {
@@ -499,7 +500,6 @@ export default function Home() {
           <m.div
             initial={{ y: 200, opacity: 0 }}
             whileInView={{
-             
               y: [200, 0],
               opacity: [0, 1],
               transition: {
@@ -531,7 +531,6 @@ export default function Home() {
           <m.div
             initial={{ y: 200, opacity: 0 }}
             whileInView={{
-             
               y: [200, 0],
               opacity: [0, 1],
               transition: {
@@ -557,14 +556,14 @@ export default function Home() {
               FISIOTERAPIA
             </p>
           </m.div>
-          <div className="w-72 h-96 text-5xl italic object-cover text-orange-400 border-4 p-5 border-orange-400 ">
+          <div className="w-72 h-96 text-4xl italic object-cover text-orange-400 border-4 p-5 border-orange-400 ">
             <h2>COMIENZA HOY TU CAMBIO FÍSICO EN WALK ON FITNESS</h2>
             <button
               onPointerOver={() => setButtonComencemos(true)}
               onPointerOut={() => setButtonComencemos(false)}
-              className="w-32 overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-[1rem] bg-orange-400 transiton-all duration-500 z-[200]"
+              className="w-40 overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-[1rem] bg-orange-400 transiton-all duration-500 z-[200]"
             >
-              <div className=" buttonComencemos flex w-[600px]  -ml-[197px] gap-32 ">
+              <div className=" buttonComencemos flex w-[600px] -ml-[205px] gap-32 ">
                 <h3>¡ADELANTE!</h3>
                 <h3>¡COMENCEMOS!</h3>
               </div>
@@ -572,12 +571,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className=" h-screen -ml-5 relative flex flex-col gap-20 justify-center items-center">
-        <img
-          src={bg2}
-          alt="img-bg2"
-          className="absolute w-60 brightness-[0.2] -ml-[1100px] -mt-80 "
-        />
+      <section className=" h-screen -ml-5 relative flex flex-col gap-20 justify-center items-center">      
         <h3 className="text-2xl text-orange-400">ASÍ ES CÓMO LO HACEMOS</h3>
         <h3 className="text-5xl text-white font-bold italic">
           ¿POR DONDE EMPEZAMOS?
@@ -675,7 +669,7 @@ export default function Home() {
           className="absolute flex brightness-50 "
         />
 
-        <div className="w-screen  text-[0.9rem] h-96 flex flex-col gap-5 z-[50] p-10">
+        <div className="w-screen testimonios  text-[0.9rem] h-96 flex flex-col gap-5 z-[50] p-10">
           <p className="text-orange-400 text-xl font-bold">TESTIMONIOS</p>
           <h4 className="text-4xl italic">LO QUE OPINAN NUESTROS CLIENTES.</h4>
           <div className=" comments w-96 h-52 p-5 gap-2  flex flex-col justify-center items-start bg-[#141414]">
@@ -686,7 +680,7 @@ export default function Home() {
       </section>
       <section className="w-screen h-screen flex ">
         <div className="w-1/2  p-10 text-[1.2rem] flex flex-col  text-white gap-10 ">
-          <h3>CONTACTO</h3>
+          <h3 className="test-1">CONTACTO</h3>
           <h2 className="text-5xl text-orange-400 italic">
             ¡COMENCEMOS EL ENTRENAMIENTO!
           </h2>
@@ -695,23 +689,13 @@ export default function Home() {
             para programar una consulta o para obtener más información sobre
             nuestros servicios. Estamos aquí para ayudarte.
           </p>
-          <div className="w-full flex gap-5">
-            <div className="flex flex-col gap-5 text-white">
-              <h3 className="text-orange-400 font-bold">INFO</h3>
-              <p>Carrer Matas, 88, local 2, 08391 Tiana, Barcelona</p>
-              <p>(+34) 931 74 68 67</p>
-              <p>info@walkonfitness.es</p>
-            </div>
-            <div className="flex flex-col gap-5">
-              <h3 className="text-orange-400 font-bold">HORARIO</h3>
-              <p>Lun. – Viern.: 8.00 – 14.00 // 16:00 – 21:00</p>
-            </div>
-          </div>
-          <h2 className="text-orange-400 text-2xl font-bold">
-            SIGUENOS EN NUESTRAS REDES SOCIALES
-          </h2>
+          <img
+          src={bg2}
+          alt="img-bg2"
+          className="absolute w-[500px] brightness-[0.2] mt-80 -ml-5" 
+        />
         </div>
-        <div className="w-1/2  bg-gradient-to-b from-[rgb(50,50,50)] flex flex-col justify-center gap-20 text-xl m-10 p-10 overflow-hidden">
+        <div className=" contacto w-1/2  bg-gradient-to-b from-[rgb(50,50,50)] flex flex-col justify-center gap-20 text-xl m-10 p-10 overflow-hidden">
           <h2 className="text-orange-400 text-2xl italic">
             ENVIANOS UN CORREO DESDE AQUÍ
           </h2>
@@ -731,13 +715,56 @@ export default function Home() {
               placeholder="Mensaje"
               className="bg-[rgb(75,75,75)] border-2  border-b-orange-400 border-[rgb(75,75,75)]"
             />
+            <button className="bg-orange-400 h-12 text-white hover:text-orange-400 hover:bg-white transition-all">
+              Enviar
+            </button>
           </form>
         </div>
       </section>
-      <footer className="relative w-screen h-screen p-10 flex justify-between gap-5">
-        <div className="absolute"></div>
-        <img src={bg} className="absolute w-[33%] h-[86.5%]"></img>
-        <div className="w-[66%] bg-red-300 "></div>
+      <footer className=" w-screen h-screen p-10 flex justify-between gap-5">
+        <div className="flex items-center">
+          <img
+            src={bg}
+            className="absolute w-[33%] h-[86.5%] brightness-[0.8]"
+          ></img>
+             <h3 className="absolute w-96 italic p-5 text-6xl text-white font-bold">MOTIVACIÓN, TRABAJO Y RESULTADOS ASEGURADOS</h3>
+          <div className="absolute w-[33%] h-[86.7%] bg-gradient-to-t from-[rgb(20,20,20)] z-[150]"></div>
+        </div>
+        <div className="w-[65.5%] flex text-white  bg-[rgb(40,40,40)] ">
+          <img
+            src={bg_black}
+            className="absolute w-[66%] h-[86.5%]  brightness-[0.2]"
+          ></img>
+       
+          <div className="absolute w-[66%] h-[86.7%] bg-gradient-to-t from-[rgb(20,20,20)]"></div>
+          <div className="w-full text-xl justify-around z-[50] flex p-10">
+            <div className="text-white ">
+              <div className="w-full flex gap-5">
+                <div className="w-72 flex flex-col gap-6 p-5 text-white">
+                  <h3 className="text-orange-400 font-bold border-b">INFO</h3>
+                  <p>Carrer Matas, 88, local 2, 08391 Tiana, Barcelona</p>
+                  <p>(+34) 931 74 68 67</p>
+                  <p>info@walkonfitness.es</p>
+                  <h2 className="absolute mt-60 z-[50] text-2xl text-orange-400 ">REDES SOCIALES</h2>
+                </div>
+                <div className="flex flex-col gap-5 w-40 p-5">
+                  <h3 className="text-orange-400  font-bold border-b">MENÚ</h3>
+                  <ul className="flex flex-col gap-5">
+                    <div className="flex gap-2"><span> - </span><li>Inicio</li></div>
+                    <div className="flex gap-2"><span> - </span><li>Servicios</li></div>
+                    <div className="flex gap-2"><span> - </span><li>Testimonios</li></div>
+                    <div className="flex gap-2"><span> - </span><li>Contacto</li></div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-5 w-60 p-5 ">
+              <h3 className="text-orange-400 font-bold border-b">HORARIO</h3>
+              <p>Lun. – Viern.: 8.00 – 14.00 // 16:00 – 21:00</p>
+            </div>
+          </div>
+       
+        </div>
       </footer>
     </main>
   );
