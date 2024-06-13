@@ -11,6 +11,16 @@ html {
   font-style: normal;
 }
 
+svg{
+  fill:rgb(255, 255, 255)
+}
+
+svg:hover{
+  fill:rgb(226, 130, 66)
+}
+
+
+
 h2 {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;

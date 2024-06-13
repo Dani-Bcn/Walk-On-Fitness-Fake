@@ -43,7 +43,6 @@ export default function Navbar() {
           >
             <li>INICIO</li>
           </Link>
-
           <Link
             activeClass="active"
             to="equipo"
