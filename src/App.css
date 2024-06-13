@@ -109,3 +109,26 @@ h5 {
   
 }
  */
+
+ .portrait-primary{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .landscape-primary{
+  display: flex;
+  flex-direction: row;
+ }
+
+ .box {
+  flex-direction: row;  
+  width: 90vw;
+  gap:10
+}
+
+ @media screen and (max-width: 550px) {
+  .box {
+    flex-direction: column;  
+    gap: 10;
+  }
+}
