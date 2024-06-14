@@ -716,6 +716,145 @@ export const Home2 = (props) => {
           </div>
         </div>
       </section>
+      <section className=" box-contacto w-screen h-screen flex ">
+        <div className="w-1/2  p-10 text-[1.2rem] flex flex-col  text-white gap-10 ">
+          <h3 className="test-1">CONTACTO</h3>
+          <h2 className="text-5xl text-orange-400 italic">
+            ¡COMENCEMOS EL ENTRENAMIENTO!
+          </h2>
+          <p>
+            ¿Listo para comenzar una vida más saludable? Contáctanos hoy mismo
+            para programar una consulta o para obtener más información sobre
+            nuestros servicios. Estamos aquí para ayudarte.
+          </p>
+          <img
+            src={bg2}
+            alt="img-bg2"
+            className="absolute w-[400px] brightness-[0.2] mt-80 -ml-5"
+          />
+        </div>
+        <div className="cnt-contacto contacto w-1/2  bg-gradient-to-b from-[rgb(50,50,50)] flex flex-col justify-center gap-20 text-xl m-10 p-10 overflow-hidden">
+          <h2 className="text-orange-400 text-2xl italic">
+            ENVIANOS UN CORREO DESDE AQUÍ
+          </h2>
+          <form className="flex flex-col gap-10">
+            <input
+              type="text"
+              placeholder="Nombre"
+              className="bg-[rgb(75,75,75)] -mt-10 p-2 border-2 border-b-orange-400 border-[rgb(75,75,75)]"
+            />
+            <input
+              type="text"
+              placeholder="Correo electrónico"
+              className="bg-[rgb(75,75,75)] p-2 border-2  border-b-orange-400 border-[rgb(75,75,75)]"
+            />
+            <textarea
+              type="text"
+              placeholder="Mensaje"
+              className="bg-[rgb(75,75,75)] border-2  border-b-orange-400 border-[rgb(75,75,75)]"
+            />
+            <button className="bg-orange-400 h-12 text-white hover:text-orange-400 hover:bg-white transition-all">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+       <footer className=" w-screen h-screen p-10 flex justify-between gap-5">
+        <div className="flex items-center">
+          <h3 className="absolute w-96 italic p-5 text-6xl text-white font-bold">
+            MOTIVACIÓN, TRABAJO Y RESULTADOS ASEGURADOS
+          </h3>      
+        </div>
+        <div className="w-[65.5%] flex text-white  bg-[rgb(40,40,40)] ">
+          <div className="absolute w-[66%] h-[86.7%] bg-gradient-to-t from-[rgb(20,20,20)]"></div>
+          <div className="w-full text-xl justify-around z-[50] flex p-10">
+            <div className="text-white ">
+              <div className="w-full flex gap-5">
+                <div className="w-72 flex flex-col gap-6 p-5 text-white">
+                  <h3 className="text-orange-400 font-bold border-b">INFO</h3>
+                  <p>Carrer Matas, 88, local 2, 08391 Tiana, Barcelona</p>
+                  <p>(+34) 931 74 68 67</p>
+                  <p>info@walkonfitness.es</p>
+                  <h2 className="absolute mt-72 z-[50] text-2xl text-orange-400 ">
+                    REDES SOCIALES
+                  </h2>
+                  <div className="flex gap-10 mt-32 ml-1 ">
+                    <a
+                      href="https://www.facebook.com/walkonfitness"
+                      target="_blank"
+                    >
+                      <svg
+                        stroke="blue"
+                        fill="white"
+                        className="e-font-icon-svg e-fab-facebook"
+                        viewBox="0 0 512 512"
+                     
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+                      </svg>
+                    </a>
+                    <a
+                      className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-e162b7b"
+                      href="https://www.instagram.com/walk_on_fitness/"
+                      target="_blank"
+                    >
+                      <svg
+                        stroke="blue"
+                        fill="white"
+                        className="w-8"
+                        viewBox="0 0 448 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                      </svg>
+                    </a>
+                    <a
+                      className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-d6a01f5"
+                      target="_blank"
+                    >
+                      <svg
+                        className="w-9"
+                        stroke="blue"
+                        fill="white"
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-5 w-40 p-5">
+                  <h3 className="text-orange-400 font-bold border-b">MENÚ</h3>
+                  <ul className="flex flex-col gap-5">
+                    <div className="flex gap-2">
+                      <span> - </span>
+                      <li>Inicio</li>
+                    </div>
+                    <div className="flex gap-2">
+                      <span> - </span>
+                      <li>Servicios</li>
+                    </div>
+                    <div className="flex gap-2">
+                      <span> - </span>
+                      <li>Testimonios</li>
+                    </div>
+                    <div className="flex gap-2">
+                      <span> - </span>
+                      <li>Contacto</li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-5 w-60 p-5 ">
+              <h3 className="text-orange-400 font-bold border-b">HORARIO</h3>
+              <p>Lun. – Viern.: 8.00 – 14.00 // 16:00 – 21:00</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 };

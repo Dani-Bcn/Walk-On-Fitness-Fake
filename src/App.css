@@ -225,4 +225,25 @@ h5 {
     justify-content: center;
     align-items: center;
   }
+  .box-contacto {
+    flex-direction: column;
+    margin-top: -200px;
+    height: 1200px;
+  }
+  .cnt-contacto {
+    position: relative;
+    width: 80vw;
+  }
+
+  .box-contacto h2 {
+    font-size: 2rem;
+  }
+
+  .box-contacto p {
+    width: 90vw;
+  }
+
+  form input {
+    width: 60vw;
+  }
 }
