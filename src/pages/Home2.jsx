@@ -610,6 +610,90 @@ export const Home2 = (props) => {
           </div>
         </div>
       </section>
+      <section className="box-empezamos h-[150vh] -ml-5 relative flex flex-col gap-10 mt-20 items-center">
+        <h3 className="text-2xl text-orange-400">ASÍ ES CÓMO LO HACEMOS</h3>
+        <h3 className="text-5xl text-white font-bold italic">
+          ¿POR DONDE EMPEZAMOS?
+        </h3>
+        <p className="text-white text-xl">
+          ¿Te interesa conocer el procedimiento para comenzar a trabajar?
+          Descúbrelo aquí mismo.
+        </p>
+        <div className="cnt-comencemos w-screen flex justify-center gap-10 items-center font-normal text-white text-[0.25em]">
+          <m.div
+            initial={{
+              y: 200,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: [200, 0],
+              opacity: [0, 1],
+              transition: {
+                duration: 0.5,
+                ease: "backOut",
+              },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+            className="w-[400px] h-52 flex flex-col gap-5 hover:shadow-orange-400 hover:shadow-md hover:-mt-1 transition-all  rounded-xl justify-center items-center  border border-[rgba(255,255,255,0.15)]"
+          >
+            <h3 className="text-orange-400 text-3xl">ENTREVISTA PERSONAL</h3>
+            <p className="text-center w-80 text-[0.8rem]">
+              Dónde analizamos tus objetivos y motivaciones (perdida de peso,
+              ganancia de masa muscular, prueba deportiva, oposiciones...) y
+              conocemos tu posible historial de lesiones, asi como tu
+              experiencia previa en el ámbito del entrenamiento.
+            </p>
+          </m.div>
+          <m.div
+            initial={{
+              y: 200,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: [200, 0],
+              opacity: [0, 1],
+              transition: {
+                duration: 0.5,
+                ease: "backOut",
+              },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+            className="w-[400px] h-52 flex flex-col gap-5  hover:shadow-orange-400 hover:shadow-md hover:-mt-1 transition-all  rounded-xl justify-center items-center  border border-[rgba(255,255,255,0.15)]"
+          >
+            <h3 className="text-orange-400 text-3xl"> VALORACIÓN FUNCIONAL</h3>
+            <p className="text-center w-80 text-[0.8rem]">
+              Defendemos la calidad de movimiento, “primero muévete bien,
+              despues muévete mucho, Gray Cook” , con esta valoración conocemos
+              los posibles desequilibrios, asimetrías, déficit de control motor
+              o de fuerza.
+            </p>
+          </m.div>
+          <m.div
+            initial={{
+              y: 200,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: [200, 0],
+              opacity: [0, 1],
+              transition: {
+                duration: 0.5,
+                ease: "backOut",
+              },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+            className="w-[400px] h-52 flex flex-col hover:shadow-orange-400 hover:shadow-md hover:-mt-1 transition-all  rounded-xl gap-5 justify-center items-center  border border-[rgba(255,255,255,0.15)]"
+          >
+            <h3 className="text-orange-400 text-3xl">ESTAMOS LISTOS</h3>
+            <p className="text-center w-80 text-[0.8rem]">
+              Bien de forma presencial o de forma on line, con toda la
+              información prevía, habremos desarrollado una hoja de ruta, lo que
+              llamamos programación, con la cual nos acercaremos a la
+              consecución de tus metas.
+            </p>
+          </m.div>
+        </div>
+      </section>
     </main>
   );
 };
