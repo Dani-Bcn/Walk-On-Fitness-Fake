@@ -161,4 +161,16 @@ h5 {
     width: 90vw;
     text-align: center;
   }
+  .box-data {
+    margin-top: 50px;
+    height: 70vh; 
+    gap:10px;
+    flex-direction: column;
+  }
+  .box-data p{
+       font-size: 0.5em;
+    width: 95vw;
+    text-align: center;
+}
+
 }

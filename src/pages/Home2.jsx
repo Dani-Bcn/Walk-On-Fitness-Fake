@@ -404,6 +404,33 @@ export const Home2 = (props) => {
           </button>
         </div>
       </section>
+      <section className="box-data w-[95vw] text-6xl  h-40 flex justify-around items-center">
+        <div className="relative italic flex justify-center items-center">
+          <h5 className="absolute ">05</h5>
+          <p className="absolute z-[50] text-white text-3xl font-black italic">
+            +15
+            <br /> AÑOS DE EXPERIENCIA
+          </p>
+        </div>
+        <div className="relative italic flex justify-around items-center">
+          <h5 className="absolute ">20</h5>
+          <p className="absolute z-[50] text-white text-3xl font-black italic">
+            +10 ENTRENADORES CALIFICADOS
+          </p>
+        </div>
+        <div className="relative italic flex justify-around items-center">
+          <h5 className="absolute">10</h5>
+          <p className="absolute z-[50] text-white text-3xl font-black italic">
+            +50K CALORÍAS QUEMADAS
+          </p>
+        </div>
+        <div className="relative italic flex justify-around items-center">
+          <h5 className="absolute">500</h5>
+          <p className="absolute z-[50] text-white text-3xl font-black italic">
+            +1.000+ MIEMBROS FELICES
+          </p>
+        </div>
+      </section>
      
     </main>
   );
