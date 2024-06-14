@@ -128,6 +128,7 @@ h5 {
 }
 
 
+
  @media screen and (max-width: 550px) {
   .box {
     flex-direction: column;  
@@ -138,4 +139,25 @@ h5 {
   .wrapper-box{
     align-items: center;
   }
+  .img-woman{
+    margin-left: -150px;
+  }
+  .cnt-woman{
+    flex-direction: column;
+    margin-top: -10px;
+  }
+  .tupotencial{
+    margin-top: -200px
+  }
+  .nuestroequipo{
+   
+    z-index: 50;
+      margin-top: -275px;
+  }
+  .nuestroequipo h2{
+    font-size: 2em;
+}
+.nuestroequipo p{
+  width: 90vw;
+}
 }
