@@ -11,12 +11,12 @@ html {
   font-style: normal;
 }
 
-svg{
-  fill:rgb(255, 255, 255)
+svg {
+  fill: rgb(255, 255, 255);
 }
 
-svg:hover{
-  fill:rgb(226, 130, 66)
+svg:hover {
+  fill: rgb(226, 130, 66);
 }
 
 h2 {
@@ -108,56 +108,57 @@ h5 {
 }
  */
 
- .portrait-primary{
+.portrait-primary {
   display: flex;
   flex-direction: column;
- }
+}
 
- .landscape-primary{
+.landscape-primary {
   display: flex;
   flex-direction: row;
- }
-
- .box {
-  flex-direction: row;  
-  width: 90vw;
-  gap:10
 }
-.wrapper-box{
+
+.box {
+  flex-direction: row;
+  width: 90vw;
+  gap: 10;
+}
+.wrapper-box {
   align-items: start;
 }
 
-
-
- @media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   .box {
-    flex-direction: column;  
+    flex-direction: column;
     gap: 10;
     text-align: center;
     justify-content: center;
   }
-  .wrapper-box{
+  .wrapper-box {
     align-items: center;
   }
-  .img-woman{
+  .img-woman {
     margin-left: -150px;
+    margin-top: -100px;
   }
-  .cnt-woman{
+  .cnt-woman {
     flex-direction: column;
-    margin-top: -10px;
+    margin-top: 50px;
   }
-  .tupotencial{
-    margin-top: -200px
+  .tupotencial {
+    margin-top: -200px;
   }
-  .nuestroequipo{
-   
+  .nuestroequipo {
     z-index: 50;
-      margin-top: -275px;
+    margin-top: -525px;
+    align-items: center;
+    width: 90vw;
   }
-  .nuestroequipo h2{
+  .nuestroequipo h2 {
     font-size: 2em;
-}
-.nuestroequipo p{
-  width: 90vw;
-}
+  }
+  .nuestroequipo p {
+    width: 90vw;
+    text-align: center;
+  }
 }

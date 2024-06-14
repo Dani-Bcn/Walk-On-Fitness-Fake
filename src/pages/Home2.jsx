@@ -284,7 +284,7 @@ export const Home2 = (props) => {
             WALK ON <span>FITNESS</span>
           </m.h3>
           </div>
-          <div className="w-10/12  text-white  text-xl font-semibold ">
+          <div className="w-10/12 text-white  text-xl font-semibold ">
             <p>
               En Walk On Fitness, nos dedicamos a potenciar tu bienestar a
               través de programas integrales de entrenamiento, nutrición y
@@ -331,7 +331,7 @@ export const Home2 = (props) => {
           </div>
         </div>
       </section>
-      <section className="cnt-woman flex  w-[90vw] h-screen gap-20 mt-20 z-[50]">
+      <section className="cnt-woman flex  w-[90vw]  gap-20 mt-20 z-[50]">
         <div className="w-full h-[100vh] text-white relative flex flex-col">
           <m.img
             initial={{
@@ -372,11 +372,12 @@ export const Home2 = (props) => {
               className=" w-72 h-[450px] z-[25] "
             />
           </div>
-          <div className="w-full h-52 bg-gradient-to-r from-slate-400"></div>
+         
         </div>
-        <div className=" nuestroequipo w-[100vw] flex flex-col gap-10 text-xl italic  text-white">
-          <h4 className="equipo ">NUESTRO EQUIPO</h4>
-          <h2 className="text-5xl text-orange-400">
+        <div className=" nuestroequipo w-[100vw]  flex flex-col gap-10 text-xl italic  text-white">
+        <div className="absolute w-full flex  h-52 bg-gradient-to-r from-slate-400"></div>
+          <h4 className="equipo relative ">NUESTRO EQUIPO</h4>
+          <h2 className="relative text-5xl text-orange-400">
             TRANSFORMANDO VIDAS, FORJANDO RESULTADOS
           </h2>
           <p className="w-[600px] text-[0.9em]">
@@ -386,7 +387,7 @@ export const Home2 = (props) => {
             de salud y forma física. Con más de 15 años de experiencia combinada
             y habiendo atendido a más de 1,000 clientes satisfechos, estamos
             aquí para guiarte en cada paso del camino hacia una versión más
-            saludable y en forma de ti mismo. Conoce a los profesionales que
+            saludable y en forma de ti mismo. <br/>Conoce a los profesionales que
             están listos para desbloquear tu potencial ilimitado y llevarte más
             allá de tus límites. ¡Únete a nuestro equipo y descubre la
             diferencia que podemos hacer juntos!
