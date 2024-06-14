@@ -1,7 +1,7 @@
-import Home from "./pages/Home";
-import { Home2 } from "./pages/Home2";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar";
+import Home from "./pages/Home";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -21,7 +21,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home2" element={<Home2 />} />
       </Routes>
     </main>
   );
