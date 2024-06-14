@@ -730,7 +730,7 @@ export const Home2 = (props) => {
           <img
             src={bg2}
             alt="img-bg2"
-            className="absolute w-[400px] brightness-[0.2] mt-80 -ml-5"
+            className="img-form absolute w-[400px] brightness-[0.2] mt-80 -ml-5"
           />
         </div>
         <div className="cnt-contacto contacto w-1/2  bg-gradient-to-b from-[rgb(50,50,50)] flex flex-col justify-center gap-20 text-xl m-10 p-10 overflow-hidden">
@@ -759,41 +759,41 @@ export const Home2 = (props) => {
           </form>
         </div>
       </section>
-       <footer className=" w-screen h-screen p-10 flex justify-between gap-5">
-        <div className="flex items-center">
+      <footer className="box-footer w-screen  p-10 flex justify-between gap-5">
+        <div className="text-footer flex items-center">
           <h3 className="absolute w-96 italic p-5 text-6xl text-white font-bold">
-            MOTIVACIÓN, TRABAJO Y RESULTADOS ASEGURADOS
-          </h3>      
+            MOTIVACIÓN, TRABAJO Y RESULTADOS ASEGURADOS.
+          </h3>
         </div>
         <div className="w-[65.5%] flex text-white  bg-[rgb(40,40,40)] ">
           <div className="absolute w-[66%] h-[86.7%] bg-gradient-to-t from-[rgb(20,20,20)]"></div>
-          <div className="w-full text-xl justify-around z-[50] flex p-10">
+          <div className=" box-info w-full text-xl justify-around z-[50] flex p-10">
             <div className="text-white ">
-              <div className="w-full flex gap-5">
+              <div className=" box-info w-full flex gap-5">
                 <div className="w-72 flex flex-col gap-6 p-5 text-white">
                   <h3 className="text-orange-400 font-bold border-b">INFO</h3>
                   <p>Carrer Matas, 88, local 2, 08391 Tiana, Barcelona</p>
                   <p>(+34) 931 74 68 67</p>
                   <p>info@walkonfitness.es</p>
-                  <h2 className="absolute mt-72 z-[50] text-2xl text-orange-400 ">
+                  <h3 className="absolute mt-72 z-[50]  font-bold border-b text-xl text-orange-400 ">
                     REDES SOCIALES
-                  </h2>
-                  <div className="flex gap-10 mt-32 ml-1 ">
-                    <a
+                  </h3>
+                  <div className="flex justify-between  mt-32 max-w-48 ">
+                  <a
                       href="https://www.facebook.com/walkonfitness"
                       target="_blank"
-                    >
+                    >                     
                       <svg
                         stroke="blue"
                         fill="white"
-                        className="e-font-icon-svg e-fab-facebook"
+                        className=" w-9 e-font-icon-svg e-fab-facebook"
                         viewBox="0 0 512 512"
-                     
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
                       </svg>
                     </a>
+                   
                     <a
                       className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-e162b7b"
                       href="https://www.instagram.com/walk_on_fitness/"
@@ -848,7 +848,7 @@ export const Home2 = (props) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-5 w-60 p-5 ">
+            <div className="flex flex-col gap-5 w-60  p-5 ">
               <h3 className="text-orange-400 font-bold border-b">HORARIO</h3>
               <p>Lun. – Viern.: 8.00 – 14.00 // 16:00 – 21:00</p>
             </div>
