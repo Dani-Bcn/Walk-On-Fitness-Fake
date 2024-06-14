@@ -633,7 +633,7 @@ export const Home2 = (props) => {
                 ease: "backOut",
               },
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className="w-[400px] h-52 flex flex-col gap-5 hover:shadow-orange-400 hover:shadow-md hover:-mt-1 transition-all  rounded-xl justify-center items-center  border border-[rgba(255,255,255,0.15)]"
           >
             <h3 className="text-orange-400 text-3xl">ENTREVISTA PERSONAL</h3>
@@ -657,7 +657,7 @@ export const Home2 = (props) => {
                 ease: "backOut",
               },
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className="w-[400px] h-52 flex flex-col gap-5  hover:shadow-orange-400 hover:shadow-md hover:-mt-1 transition-all  rounded-xl justify-center items-center  border border-[rgba(255,255,255,0.15)]"
           >
             <h3 className="text-orange-400 text-3xl"> VALORACIÓN FUNCIONAL</h3>
@@ -681,7 +681,7 @@ export const Home2 = (props) => {
                 ease: "backOut",
               },
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className="w-[400px] h-52 flex flex-col hover:shadow-orange-400 hover:shadow-md hover:-mt-1 transition-all  rounded-xl gap-5 justify-center items-center  border border-[rgba(255,255,255,0.15)]"
           >
             <h3 className="text-orange-400 text-3xl">ESTAMOS LISTOS</h3>
@@ -692,6 +692,28 @@ export const Home2 = (props) => {
               consecución de tus metas.
             </p>
           </m.div>
+        </div>
+      </section>
+      <section className="box-testimonios -mt-80 z-[50] relative  w-screen h-screen p-20 overflow-hidden flex flex-col justify-center  text-white items-center">
+        <m.img
+          whileInView={{
+            scale: [1, 3],
+            transition: {
+              duration: 550,
+              repeat: Infinity,
+            },
+          }}
+          src={confident}
+          alt="confident"
+          className="absolute flex brightness-50 "
+        />
+        <div className="w-screen testimonios  text-[0.9rem] h-96 flex flex-col gap-5 z-[50] p-10">
+          <p className="text-orange-400 text-xl font-bold">TESTIMONIOS</p>
+          <h4 className="text-4xl italic">LO QUE OPINAN NUESTROS CLIENTES.</h4>
+          <div className=" comments w-96 h-52 p-5 gap-2  flex flex-col justify-center items-start bg-[#141414]">
+            <p className="text-sm h-52">{comments[count].text}</p>
+            <h3 className="text-orange-400 text-2xl">{comments[count].name}</h3>
+          </div>
         </div>
       </section>
     </main>
