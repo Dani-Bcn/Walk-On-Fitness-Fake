@@ -37,7 +37,7 @@ export default function Navbar() {
           <img src={Logo} alt="img-logo" width={200} />
         </div>
         <ul className=" flex items-center col-start-4 gap-10 text-[#F6891F] font-bold  italic ">
-        <li onClick={()=> navigate("/home2")}>Home2</li>
+      
           <Link
             activeClass="active"
             to="inicio"
