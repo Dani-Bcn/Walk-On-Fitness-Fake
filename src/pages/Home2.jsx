@@ -26,7 +26,7 @@ import {
 
 export const Home2 = (props) => {
   const [buttonServices, setButtonServices] = useState(false);
- gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   buttonServices
     ? gsap.to(".buttonServices", {
@@ -38,11 +38,11 @@ export const Home2 = (props) => {
 
   useEffect(() => {
     gsap.to(".years", {
-        scrollTrigger:{
-            trigger:".years",
-            start:-0.49,
-            stop:500,
-        },
+      scrollTrigger: {
+        trigger: ".years",
+        start: -0.49,
+        stop: 500,
+      },
       innerText: 15,
       duration: 2,
       ease: "circ.out",
@@ -51,11 +51,11 @@ export const Home2 = (props) => {
       },
     });
     gsap.to(".clients", {
-        scrollTrigger:{
-            trigger:".clients",
-            start:-0.49,
-            stop:500,
-        },
+      scrollTrigger: {
+        trigger: ".clients",
+        start: -0.49,
+        stop: 500,
+      },
       innerText: 1000,
       delay: 0.5,
       duration: 1,
@@ -65,11 +65,11 @@ export const Home2 = (props) => {
       },
     });
     gsap.to(".training", {
-        scrollTrigger:{
-            trigger:".training",
-            start:-0.49,
-            stop:500,
-        },
+      scrollTrigger: {
+        trigger: ".training",
+        start: -0.49,
+        stop: 500,
+      },
       innerText: 38000,
       delay: 1,
       duration: 1,
@@ -267,22 +267,22 @@ export const Home2 = (props) => {
       />
       <section className="box relative w-[90vw] flex justify-center  gap-10 items-center mt-32 p-3 ">
         <m.div className="wrapper-box flex flex-col gap-10  overflow-hidden text-8xl  font-bold italic  ">
-        <h3 className="text-xl mt-5">
+          <h3 className="text-xl mt-5">
             <span>PEQUEÑOS CAMBIOS, GRANDES RESULTADOS.</span>
           </h3>
           <div className="overflow-hidden">
-          <m.h3
-            animate={{
-              y: [550, 0],
-              transition: {
-                duration: 1,
-                ease: "circOut",
-              },
-            }}
-            className="font-bold italic text-white "
-          >
-            WALK ON <span>FITNESS</span>
-          </m.h3>
+            <m.h3
+              animate={{
+                y: [550, 0],
+                transition: {
+                  duration: 1,
+                  ease: "circOut",
+                },
+              }}
+              className="font-bold italic text-white "
+            >
+              WALK ON <span>FITNESS</span>
+            </m.h3>
           </div>
           <div className="w-10/12 text-white  text-xl font-semibold ">
             <p>
@@ -292,7 +292,6 @@ export const Home2 = (props) => {
               objetivos de salud y forma física.
             </p>
           </div>
-          
 
           <button
             onPointerOver={() => setButtonServices(true)}
@@ -338,7 +337,7 @@ export const Home2 = (props) => {
               x: 0,
               opacity: 0,
             }}
-           whileInView={{
+            whileInView={{
               x: [0, 150],
               opacity: [0, 1],
               transition: {
@@ -351,9 +350,12 @@ export const Home2 = (props) => {
             className=" img-woman absolute w-[450px] z-[75]"
           />
           <div className="flex justify-start italic text-6xl">
-             <div className="w-72 mt-40 z-[50]   ">
-              <h3 className=" tupotencial italic font-bold w-60"> Tu potencial es ilimitado</h3>
-            </div> 
+            <div className="w-72 mt-40 z-[50]   ">
+              <h3 className=" tupotencial italic font-bold w-60">
+                {" "}
+                Tu potencial es ilimitado
+              </h3>
+            </div>
             <m.img
               initial={{
                 x: [200, 50],
@@ -372,10 +374,9 @@ export const Home2 = (props) => {
               className=" w-72 h-[450px] z-[25] "
             />
           </div>
-         
         </div>
         <div className=" nuestroequipo w-[100vw]  flex flex-col gap-10 text-xl italic  text-white">
-        <div className="absolute w-full flex  h-52 bg-gradient-to-r from-slate-400"></div>
+          <div className="absolute w-full flex  h-52 bg-gradient-to-r from-slate-400"></div>
           <h4 className="equipo relative ">NUESTRO EQUIPO</h4>
           <h2 className="relative text-5xl text-orange-400">
             TRANSFORMANDO VIDAS, FORJANDO RESULTADOS
@@ -387,10 +388,10 @@ export const Home2 = (props) => {
             de salud y forma física. Con más de 15 años de experiencia combinada
             y habiendo atendido a más de 1,000 clientes satisfechos, estamos
             aquí para guiarte en cada paso del camino hacia una versión más
-            saludable y en forma de ti mismo. <br/>Conoce a los profesionales que
-            están listos para desbloquear tu potencial ilimitado y llevarte más
-            allá de tus límites. ¡Únete a nuestro equipo y descubre la
-            diferencia que podemos hacer juntos!
+            saludable y en forma de ti mismo. <br />
+            Conoce a los profesionales que están listos para desbloquear tu
+            potencial ilimitado y llevarte más allá de tus límites. ¡Únete a
+            nuestro equipo y descubre la diferencia que podemos hacer juntos!
           </p>
           <button
             onPointerOver={() => setButtonMembers(true)}
@@ -431,7 +432,184 @@ export const Home2 = (props) => {
           </p>
         </div>
       </section>
-     
+      <section className="box-servicios servicios w-screen flex flex-col mt-20 ">
+        <div className="cnt-servicios flex   w-full h-96">
+          <div className="flex w-1/2 h-96 p-10 flex-col gap-20 text-white text-xl justify-center">
+            <h4>SERVICIOS</h4>
+            <h2 className="text-5xl text-orange-400 italic">
+              EL ÉXITO ES UN DEPORTE DE EQUIPO
+            </h2>
+            <p>
+              ¿Pensando en cambiar tus hábitos y ponerte en forma? Hazlo de la
+              mejor manera con Walk On Fitness. Descubre todos nuestros
+              servicios que tenemos para comenzar tu transformación física.
+            </p>
+          </div>
+          <div className="box-servicios-img flex ml-6 gap-5">
+            <m.div
+              initial={{ y: 200, opacity: 0 }}
+              whileInView={{
+                y: [200, 0],
+                opacity: [0, 1],
+                transition: {
+                  ease: "circInOut",
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+              onPointerOver={() => setAthleticWoman(true)}
+              onPointerOut={() => setAthleticWoman(false)}
+              className="relative w-full h-full  flex justify-center items-center text-xl text-orange-400 text-center overflow-hidden"
+            >
+              <img
+                src={athletic_woman}
+                alt="img-athletic"
+                className=" w-72 h-96 object-cover brightness-50"
+              />
+              <div className="bg-athletic-woman absolute flex  w-full h-full bg-gradient-to-t justify-center items-center from-[rgb(20,20,20)] to-[rgba(20,20,20,0.5)]  z-[75]"></div>
+              <p className="text-athletic-woman absolute w-[95%] h-full italic flex justify-center items-center font-bold z-[75]">
+                LAS SESIONES SE DESARROLLAN DE FORMA PERSONAL, “ONE TO ONE”, UN
+                CLIENTE CON UN ENTRENADOR. ESTE SERVICIO INCLUYE EL
+                ASESORAMIENTO NUTRICIONAL.
+              </p>
+              <p className="absolute mt-80 italic text-white z-[75]">
+                ENTRENAMIENTO PERSONAL
+              </p>
+            </m.div>
+            <m.div
+              initial={{ y: 200, opacity: 0 }}
+              whileInView={{
+                y: [200, 0],
+                opacity: [0, 1],
+                transition: {
+                  ease: "circInOut",
+                  duration: 0.5,
+                },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+              onPointerOver={() => setCoupleCross(true)}
+              onPointerOut={() => setCoupleCross(false)}
+              className="relative w-full h-full  flex justify-center items-center text-xl text-orange-400 text-center overflow-hidden"
+            >
+              <img
+                src={couple_cross}
+                alt="couple"
+                className="w-72 h-96 object-cover brightness-50"
+              />
+              <div className="bg-couple-cross  absolute flex w-full h-full bg-gradient-to-t justify-center items-center from-[rgb(20,20,20)] to-[rgba(20,20,20,0.5)]  z-[75]"></div>
+              <p className="text-couple-cross absolute w-[95%] h-full italic flex justify-center items-center font-bold z-[75]">
+                LAS SESIONES SE DESARROLLAN CON UN GRUPO DE 4 PERSONAS Y UN
+                ENTRENADOR. CADA PERSONA DESARROLLA SU PROGRAMA DE ENTRENAMIENTO
+                INDIVIDUALIZADO.
+              </p>
+              <p className="absolute mt-80 italic text-white z-[75]">
+                ENTRENAMIENTO SEMIPROFESIONAL
+              </p>
+            </m.div>
+          </div>
+        </div>
+        <div className="box-servicios-img2  w-screen flex my-10 mx-1">
+          <m.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{
+              y: [200, 0],
+              opacity: [0, 1],
+              transition: {
+                ease: "circInOut",
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            onPointerOver={() => setNutrition(true)}
+            onPointerOut={() => setNutrition(false)}
+            className="relative w-[25%] h-full  flex justify-center items-center text-xl text-orange-400 text-center overflow-hidden"
+          >
+            <img
+              src={fliying_ingredients}
+              alt="img-ingredients"
+              className=" w-72 h-96 object-cover  brightness-50"
+            />
+            <div className="bg-nutrition  absolute flex w-full h-full bg-gradient-to-t justify-center items-center from-[rgb(20,20,20)] to-[rgba(20,20,20,0.5)]  z-[75]"></div>
+            <p className="text-nutrition w-60 absolute h-full flex justify-center italic items-center font-bold z-[75]">
+              DIETA PERSONALIZADA, REALIZADA A PARTIR DE UNA VALORACIÓN DE
+              ANALITICAS, SI SE DISPONE, ESTUDIOS DE COMPOSICIÓN CORPORAL.
+            </p>
+            <p className="absolute mt-80 italic text-white z-[75]">NUTRICIÓN</p>
+          </m.div>
+          <m.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{
+              y: [200, 0],
+              opacity: [0, 1],
+              transition: {
+                ease: "circInOut",
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            onPointerOver={() => setYoungs(true)}
+            onPointerOut={() => setYoungs(false)}
+            className="relative w-[25%] h-full  flex justify-center items-center text-xl text-orange-400 text-center overflow-hidden"
+          >
+            <img
+              src={cheerful_young}
+              alt="cheerful"
+              className="w-72 h-96 object-cover  brightness-50"
+            />
+            <div className="bg-youngs  absolute flex w-full h-full bg-gradient-to-t justify-center items-center from-[rgb(20,20,20)] to-[rgba(20,20,20,0.5)]  z-[75]"></div>
+            <p className="text-youngs w-60 absolute text-[0.8em] h-full flex justify-center italic items-center font-bold z-[75]">
+              LOS BENEFICIOS DE LA ACTIVIDAD FÍSICA, INTEGRADA EN EL ÁMBITO
+              LABORAL. LAS GRANDES COMPAÑIAS DESDE HACE DECADAS IMPLEMENTAN
+              PROGRAMAS DE SALUD PARA SUS EMPLEADOS, CON EL FIN DE MEJORAR SU
+              PRODUCTIVIDAD Y RETENER TALENTO..
+            </p>
+            <p className="absolute w-72 mt-80 font-bold italic text-white z-[75]">
+              EMPRESAS SALUDABLES-CORPORATE WELLNESS
+            </p>
+          </m.div>
+          <m.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{
+              y: [200, 0],
+              opacity: [0, 1],
+              transition: {
+                ease: "circInOut",
+                duration: 0.5,
+              },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            onPointerOver={() => setFisio(true)}
+            onPointerOut={() => setFisio(false)}
+            className="relative w-[25%] h-full  flex justify-center items-center text-xl text-orange-400 text-center overflow-hidden"
+          >
+            <img
+              src={fisioterapia}
+              alt="fisioterapia"
+              className="w-72 h-96 object-cover  brightness-50"
+            />
+            <div className="bg-fisio  absolute flex w-full h-full bg-gradient-to-t justify-center items-center from-[rgb(20,20,20)] to-[rgba(20,20,20,0.5)]  z-[75]"></div>
+            <p className="text-fisio w-60 absolute text-3xl h-full flex justify-center italic items-center font-bold z-[75]">
+              FISIOTERAPIA
+            </p>
+            <p className="absolute w-72 mt-80 font-bold italic text-white z-[75]">
+              FISIOTERAPIA
+            </p>
+          </m.div>
+          <div className="w-72 h-96 text-4xl italic object-cover text-orange-400 border-4 p-5 border-orange-400 ">
+            <h2>COMIENZA HOY TU CAMBIO FÍSICO EN WALK ON FITNESS</h2>
+            <button
+              onPointerOver={() => setButtonComencemos(true)}
+              onPointerOut={() => setButtonComencemos(false)}
+              className="w-40 overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-[1rem] bg-orange-400 transiton-all duration-500 z-[200]"
+            >
+              <div className=" buttonComencemos flex w-[600px] -ml-[205px] gap-32 ">
+                <h3>¡ADELANTE!</h3>
+                <h3>¡COMENCEMOS!</h3>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
