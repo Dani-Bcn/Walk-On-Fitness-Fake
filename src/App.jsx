@@ -1,24 +1,21 @@
-
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar";
+import NavbarResp from "./pages/NavbarResp";
 import Home from "./pages/Home";
 import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [screen, setScreen] = useState();
 
-  window.addEventListener("resize", (event) => {
-    setScreen(window.screen.orientation.type);
-  });
-
-  useEffect(() => {
-    setScreen(window.screen.orientation.type);
-  }, [screen]);
+const [menuResp, setMenuResp]= useState(false)
+  const activeMenuResp =((event)=>{
+    setMenuResp(event)
+  })
 
   return (
-    <main>
-      <Navbar />
+    <main className="w-screen bg-[20,20,20] overflow-hidden">
+      <Navbar  activeMenuResp={activeMenuResp}  menuResp={menuResp}/>
+      <NavbarResp menuResp={menuResp} activeMenuResp={activeMenuResp} />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

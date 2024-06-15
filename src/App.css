@@ -127,7 +127,7 @@ h5 {
   align-items: start;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1300px) {
   .box {
     flex-direction: column;
     gap: 10;
