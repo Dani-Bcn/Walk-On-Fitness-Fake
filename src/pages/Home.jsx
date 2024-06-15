@@ -296,7 +296,7 @@ export default function Home() {
           <button
             onPointerOver={() => setButtonServices(true)}
             onPointerOut={() => setButtonServices(false)}
-            className="w-40 rounded-md overflow-hidden h-16 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[200]"
+            className="w-40 rounded-md overflow-hidden h-16 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]"
           >
             <div className=" buttonServices flex -ml-[175px] gap-40 ">
               <h3>Ver</h3>
@@ -307,14 +307,14 @@ export default function Home() {
         <div className=" w-screen gap-14 h-[500px] flex flex-col  justify-start ">
           <div className=" flex flex-col  justify-center  items-center  text-6xl font-bold ">
             <span className="flex">
-              <h2 className="years z-[200]"></h2>
+              <h2 className="years z-[100]"></h2>
               <h2 className="flex font-black ">+</h2>
             </span>
             <h2 className="text-2xl italic">AÑOS DE EXPERIENCIA</h2>
           </div>
           <div className=" flex flex-col justify-center items-center text-7xl font-bold ">
             <span className="flex">
-              <h2 className="clients z-[200]"></h2>
+              <h2 className="clients z-[150]"></h2>
               <h2 className="flex font-black ">+</h2>
             </span>
             <h2 className="text-2xl italic text-center">
@@ -323,7 +323,7 @@ export default function Home() {
           </div>
           <div className=" flex flex-col justify-center text-center items-center  text-7xl font-bold ">
             <span className="flex">
-              <h2 className="training z-[200]"></h2>
+              <h2 className="training z-[100]"></h2>
               <h2 className="flex font-black ">+</h2>
             </span>
             <h2 className="text-2xl italic">ENTRENAMIENTOS REALIZADOS</h2>

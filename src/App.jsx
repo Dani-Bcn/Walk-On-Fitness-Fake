@@ -13,7 +13,7 @@ const [menuResp, setMenuResp]= useState(false)
   })
 
   return (
-    <main className="w-screen bg-[20,20,20] overflow-hidden">
+    <main >
       <Navbar  activeMenuResp={activeMenuResp}  menuResp={menuResp}/>
       <NavbarResp menuResp={menuResp} activeMenuResp={activeMenuResp} />
       <Routes>
