@@ -25,7 +25,7 @@ export default function NavbarResp(props) {
          }}
       className="fixed -ml-[1400px] w-screen h-screen overflow-hidden p-20 bg-[rgb(20,20,20)] z-[200]"
     >
-      <div className=" relative w-full flex  flex-col gap-5  p-5">
+      <div className="scale-[1.5] mt-40 relative w-full flex  flex-col gap-5  p-5">
         <h3 className="text-orange-400 font-bold border-b">MENÚ</h3>
         <ul className="flex flex-col text-white  gap-5">
           <div className="flex gap-2">
