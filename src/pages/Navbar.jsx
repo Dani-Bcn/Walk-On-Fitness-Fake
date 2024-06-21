@@ -46,7 +46,7 @@ export default function Navbar(props) {
     <main className="overflow-hidden navbar fixed w-screen  h-20 brightness-120  text-red-500 bg-[rgba(20,20,20,0)] z-[250]">
       <div className=" w-full h-full grid grid-cols-6">
         <div className=" flex justify-center items-center col-span-2 ">
-          <img src={Logo} alt="img-logo" width={200} />
+          <img src={Logo} alt="img-logo" width={200} className="img-logo" />
         </div>
         {screenMenuResp ? (
           <ul className=" flex items-center col-start-4 gap-10 text-[#F6891F] font-bold  italic ">
