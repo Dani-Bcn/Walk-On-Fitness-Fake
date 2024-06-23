@@ -25,12 +25,11 @@ import {
 } from "react-scroll";
 
 export default function Home() {
-
   useEffect(() => {
     gsap.to(".years", {
       scrollTrigger: {
         trigger: ".years",
-        start: -0.49,
+        start: -25,
         stop: 500,
       },
       innerText: 15,
@@ -71,10 +70,10 @@ export default function Home() {
   }, []);
   return (
     <main className="absolute w-screen flex flex-col justify-center items-center  bg-[rgb(20,20,20)] text-white overflow-hidden">
-      <section className="w-[90vw] text-center md:text-start mt-20 p-5 flex flex-wrap items-center justify-around ">
+      <section className="header w-[90vw]  mt-20 p-5 flex flex-wrap items-center justify-around ">
         <div className="flex flex-col justify-between w-full h-full sm:w-1/2 ">
           <h3>PEQUEÑOS CAMBIOS, GRANDES RESULTADOS.</h3>
-          <h2 className="italic" >
+          <h2 className="italic">
             <span>WALK ON</span> FITNESS
           </h2>
           <p>
@@ -101,13 +100,53 @@ export default function Home() {
               CLIENTES SATISFECHOS
             </h2>
           </div>
-          <div className=" flex flex-col justify-center text-center items-center  font-bold ">
+          <div className=" flex flex-col justify-center text-center items-center font-bold ">
             <span className="flex">
               <h2 className="training z-[100]"></h2>
               <h2 className="flex font-black ">+</h2>
             </span>
             <h2 className="text-2xl italic">ENTRENAMIENTOS REALIZADOS</h2>
           </div>
+        </div>
+        <div className="w-full mt-5">
+          <button className="w-32 mt-5 sm:-mt-96 rounded-md overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
+            <div className=" buttonServices ">
+              <h3 className="text-2xl -mt-1">Servicios</h3>
+            </div>
+          </button>
+        </div>
+      </section>
+      <section className="w-[90vw] relative   flex flex-wrap">
+        <div className="w-full sm:w-1/2">
+          <img
+            src={athletic_female}
+            alt="img-athletic"
+            className="absolute w-96  object-cover z-50 mt-24 md:mt-0"
+          />
+          <h3 className="text-5xl font-bold italic text-center md:text-start">
+            TU POTENCIAL ES ILIMITADO.
+          </h3>
+        </div>
+        <div className="w-full flex flex-col justify-center gap-10 sm:w-1/2 mt-[525px] md:mt-0 text-center md:text-start">
+          <h3 className="text-2xl font-bold ">NUESTRO EQUIPO.</h3>
+          <span>
+            <h2 className="text-5xl italic">
+              TRANSFORMANDO VIDAS, FORJANDO RESULTADOS.
+            </h2>
+          </span>
+          <p>
+            En Walk On Fitness, nuestro equipo está compuesto por entrenadores
+            altamente calificados, nutricionistas dedicados y fisioterapeutas
+            expertos que trabajan juntos para ayudarte a alcanzar tus objetivos
+            de salud y forma física. Con más de 15 años de experiencia combinada
+            y habiendo atendido a más de 1,000 clientes satisfechos, estamos
+            aquí para guiarte en cada paso del camino hacia una versión más
+            saludable y en forma de ti mismo. Conoce a los profesionales que
+            están listos para desbloquear tu potencial ilimitado y llevarte más
+            allá de tus límites. ¡Únete a nuestro equipo y descubre la
+            diferencia que podemos hacer juntos!
+          </p>
+          <button>Button</button>
         </div>
       </section>
     </main>
