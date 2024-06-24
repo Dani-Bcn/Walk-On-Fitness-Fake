@@ -155,28 +155,113 @@ export default function Home() {
           </div>
         </div>
       </section>
-     <section className="xl:w-[90vw] text-center xl:text-start  text-2xl flex flex-wrap gap-32 my-28  md:gap-20 justify-center xl:justify-between items-center">
-      <div className="w-60 font-medium">
-        <h3 >+15 AÑOS DE EXPERIENCIA</h3>
-        <h5 className="absolute -mt-24">05</h5>
-      </div>
-      <div className="w-60 font-medium">
-        <h3 >+10 ENTRENADORES CALIFICADOS</h3>
-        <h5 className="absolute -mt-24">20</h5>
-      </div>
-      <div className="w-60 font-medium">
-        <h3 >+50K CALORÍAS QUEMADAS</h3>
-        <h5 className="absolute -mt-24">40</h5>
-      </div>
-      <div className="w-60 font-medium">
-        <h3>+1.000+ MIEMBROS FELICES</h3>
-        <h5 className="absolute -mt-24">500</h5>
-      </div>
-     </section>
-     <sectio className="w-[90vw] h-screen bg-red-200 ">
-      <div className="flex bg-blue-400">
-      </div>
-     </sectio>
+      <section className="xl:w-[90vw] text-center xl:text-start  text-2xl flex flex-wrap gap-32 mt-52 mb-32  md:gap-20 justify-center xl:justify-between items-center">
+        <div className="w-60 font-medium">
+          <h3>+15 AÑOS DE EXPERIENCIA</h3>
+          <h5 className="absolute -mt-24">05</h5>
+        </div>
+        <div className="w-60 font-medium">
+          <h3>+10 ENTRENADORES CALIFICADOS</h3>
+          <h5 className="absolute -mt-24">20</h5>
+        </div>
+        <div className="w-60 font-medium">
+          <h3>+50K CALORÍAS QUEMADAS</h3>
+          <h5 className="absolute -mt-24">40</h5>
+        </div>
+        <div className="w-60 font-medium">
+          <h3>+1.000+ MIEMBROS FELICES</h3>
+          <h5 className="absolute -mt-24">500</h5>
+        </div>
+      </section>
+      <section className="w-[95vw] flex">
+        <div className="flex flex-wrap justify-center xl:justify-between p-5">
+          <div className="w-full  flex flex-col  gap-5 ">
+            <h3 className="text-2xl font-bold ">SERVICIOS.</h3>
+            <span>
+              <h2 className="text-4xl italic">
+                EL ÉXITO ES UN DEPORTE DE EQUIPO.
+              </h2>
+            </span>
+            <p className="text-[1em] w-80 md:w-[400px]">
+              ¿Pensando en cambiar tus hábitos y ponerte en forma? Hazlo de la
+              mejor manera con Walk On Fitness. Descubre todos nuestros
+              servicios que tenemos para comenzar tu transformación física.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 1/4 py-5">
+            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+              <h3>
+                ENTRENAMIENTO
+                <br /> PERSONAL
+              </h3>
+              <img
+                src={athletic_woman}
+                alt="athletic_woman"
+                className=" w-[85vw] h-96 object-cover"
+              />
+            </div>
+            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+              <h3>
+                ENTRENAMIENTO
+                <br /> SEMIPROFESIONAL
+              </h3>
+              <img
+                src={couple_cross}
+                alt="athletic_woman"
+                className="w-[85vw] h-96 object-cover"
+              />
+            </div>
+            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+              <h3>
+                NUTRICIÓN
+                <br />
+                <br />
+              </h3>
+              <img
+                src={fliying_ingredients}
+                alt="athletic_woman"
+                className="w-[85vw] h-96 object-cover"
+              />
+            </div>
+            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+              <h3>
+              EMPRESAS SALUDABLES-CORPORATE 
+             
+                 WELLNESS
+              </h3>
+              <img
+                src={cheerful_young}
+                alt="athletic_woman"
+                className="w-[85vw] h-96 object-cover"
+              />
+            </div>
+            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+              <h3>
+              FISIOTERAPIA
+              <br/>
+              <br/>
+              </h3>
+              <img
+                src={img_fisioterapia}
+                alt="athletic_woman"
+                className="w-[85vw] h-96 object-cover"
+              />
+            </div>
+            <div className="w-96 md:w-60 h-96 flex flex-col font-medium italic py-10">
+              <h2 className="text-4xl">
+                COMIENZA HOY TU CAMBIO FÍSICO EN WALK ON FITNESS
+              </h2>
+              <div className="w-full mt-20">
+                <button className="w-48 mt-5 sm:-mt-96 rounded-md overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
+                  <div className=" buttonServices ">
+                    <h3 className="text-2xl -mt-1">Hazte miembro</h3>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
