@@ -224,11 +224,7 @@ export default function Home() {
               />
             </div>
             <div className="w-96 md:w-60 flex flex-col font-medium italic">
-              <h3>
-              EMPRESAS SALUDABLES-CORPORATE 
-             
-                 WELLNESS
-              </h3>
+              <h3>EMPRESAS SALUDABLES-CORPORATE WELLNESS</h3>
               <img
                 src={cheerful_young}
                 alt="athletic_woman"
@@ -237,9 +233,9 @@ export default function Home() {
             </div>
             <div className="w-96 md:w-60 flex flex-col font-medium italic">
               <h3>
-              FISIOTERAPIA
-              <br/>
-              <br/>
+                FISIOTERAPIA
+                <br />
+                <br />
               </h3>
               <img
                 src={img_fisioterapia}
@@ -254,11 +250,52 @@ export default function Home() {
               <div className="w-full mt-20">
                 <button className="w-48 mt-5 sm:-mt-96 rounded-md overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
                   <div className=" buttonServices ">
-                    <h3 className="text-2xl -mt-1">Hazte miembro</h3>
+                    <h3 className="text-2xl -mt-1">¡Comencemos!</h3>
                   </div>
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-[90vw] flex flex-col md:text-start text-center">
+        <div className="w-[90vw] h-72 flex gap-5 flex-col justify-center items-center">
+          <h3 className="text-2xl font-bold ">ASÍ MES COMO LO HACEMOS</h3>
+          <span>
+            <h2 className="italic text-5xl">¿POR DONDE EMPEZAMOS?</h2>
+          </span>
+          <p className="text-[1em] w-80 md:w-[400px]">
+            ¿Te interesa conocer el procedimiento para comenzar a trabajar?
+            Descúbrelo aquí mismo.
+          </p>
+        </div>
+        <div className="w-full flex  justify-center flex-wrap">
+          <div className="w-96 h-60 flex flex-col gap-5 justify-center items-center border m-2 p-5">
+            <span><h2 className="text-xl h-10">ENTREVISTA PERSONAL</h2></span>
+            <p>
+              Dónde analizamos tus objetivos y motivaciones (perdida de peso,
+              ganancia de masa muscular, prueba deportiva, oposiciones...) y
+              conocemos tu posible historial de lesiones, asi como tu
+              experiencia previa en el ámbito del entrenamiento.
+            </p>
+          </div>
+          <div className="w-96 h-60 flex flex-col  gap-5 justify-center items-center  border m-2 p-5">
+            <span><h2 className="text-xl h-10">VALORACIÓN FUNCIONAL</h2></span>
+            <p>
+              Defendemos la calidad de movimiento, “primero muévete bien,
+              despues muévete mucho, Gray Cook” , con esta valoración conocemos
+              los posibles desequilibrios, asimetrías, déficit de control motor
+              o de fuerza.
+            </p>
+          </div>
+          <div className="w-96 flex flex-col gap-5 justify-center items-center  h-60 border m-2 p-5">
+            <span><h2 className="text-xl h-10">ESTAMOS LISTOS</h2></span>
+            <p>
+              Bien de forma presencial o de forma on line, con toda la
+              información prevía, habremos desarrollado una hoja de ruta, lo que
+              llamamos programación, con la cual nos acercaremos a la
+              consecución de tus metas.
+            </p>
           </div>
         </div>
       </section>
