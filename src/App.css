@@ -2,40 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   transition: all;
   transition-duration: 0.3s;
 }
 
-html{
+html {
   background-color: #141414;
 }
-h2{
+h2 {
   font-size: 5em;
-    font-weight: bold;
+  font-weight: bold;
 }
-span{
+span {
   color: #ff8800;
 }
-li{
+li {
   cursor: pointer;
 }
-li:hover{
+li:hover {
   color: aliceblue;
 }
 
-@media (max-width: 1250px) {
+h5 {
+  font-size: 5em;
+  font-style: italic;
+  -webkit-text-stroke: 0.5px rgb(255, 191, 157);
+  color: transparent;
+}
 
-  h2{
+@media (max-width: 1250px) {
+  h2 {
     font-size: 4em;
   }
-  
 }
 
 @media (max-width: 640px) {
-
-  .header{
+  .header {
     text-align: center;
   }
-  
 }

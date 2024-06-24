@@ -70,7 +70,7 @@ export default function Home() {
   }, []);
   return (
     <main className="absolute w-screen flex flex-col justify-center items-center  bg-[rgb(20,20,20)] text-white overflow-hidden">
-      <section className="header w-[90vw]  mt-20 p-5 flex flex-wrap items-center justify-around ">
+      <section className="header w-[90vw] mt-20 p-5 flex flex-wrap items-center justify-around ">
         <div className="flex flex-col justify-between w-full h-full sm:w-1/2 ">
           <h3>PEQUEÑOS CAMBIOS, GRANDES RESULTADOS.</h3>
           <h2 className="italic">
@@ -130,7 +130,7 @@ export default function Home() {
         <div className="w-full flex flex-col justify-center gap-10 sm:w-1/2 mt-[525px] md:mt-0 text-center md:text-start">
           <h3 className="text-2xl font-bold ">NUESTRO EQUIPO.</h3>
           <span>
-            <h2 className="text-5xl italic">
+            <h2 className="text-4xl italic">
               TRANSFORMANDO VIDAS, FORJANDO RESULTADOS.
             </h2>
           </span>
@@ -146,9 +146,37 @@ export default function Home() {
             allá de tus límites. ¡Únete a nuestro equipo y descubre la
             diferencia que podemos hacer juntos!
           </p>
-          <button>Button</button>
+          <div className="w-full mt-5">
+            <button className="w-48 mt-5 sm:-mt-96 rounded-md overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
+              <div className=" buttonServices ">
+                <h3 className="text-2xl -mt-1">Hazte miembro</h3>
+              </div>
+            </button>
+          </div>
         </div>
       </section>
+     <section className="xl:w-[90vw] text-center xl:text-start  text-2xl flex flex-wrap gap-32 my-28  md:gap-20 justify-center xl:justify-between items-center">
+      <div className="w-60 font-medium">
+        <h3 >+15 AÑOS DE EXPERIENCIA</h3>
+        <h5 className="absolute -mt-24">05</h5>
+      </div>
+      <div className="w-60 font-medium">
+        <h3 >+10 ENTRENADORES CALIFICADOS</h3>
+        <h5 className="absolute -mt-24">20</h5>
+      </div>
+      <div className="w-60 font-medium">
+        <h3 >+50K CALORÍAS QUEMADAS</h3>
+        <h5 className="absolute -mt-24">40</h5>
+      </div>
+      <div className="w-60 font-medium">
+        <h3>+1.000+ MIEMBROS FELICES</h3>
+        <h5 className="absolute -mt-24">500</h5>
+      </div>
+     </section>
+     <sectio className="w-[90vw] h-screen bg-red-200 ">
+      <div className="flex bg-blue-400">
+      </div>
+     </sectio>
     </main>
   );
 }
