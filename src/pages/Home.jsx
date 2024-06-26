@@ -68,6 +68,45 @@ export default function Home() {
       },
     });
   }, []);
+
+  const arryImg = [girls_having, couple_cross, confident];
+
+  const [count, setCount] = useState(0);
+
+  const funcInterval = () => {
+    clearInterval(interval);
+    setCount(count + 1);
+    count === 2 ? setCount(0) : null;
+  };
+
+  const interval = setInterval(() => {
+    funcInterval();
+  }, 5000);
+
+  useEffect(() => {
+    gsap.to(".images", {
+      scale: 1.3,
+      duration: 14.5,
+      ease: "none",
+      repeat: Infinity,
+    });
+  }, []);
+
+  const comments = [
+    {
+      name: "RAUL PC",
+      text: "Hace unos meses empecé a entrenar con Fran y los resultados no pueden ser mejores. Por primera vez siento que realmente avanzo. Fran es un profesional del deporte y la salud que te corrige, te explica y te lleva a los objetivos deseados. Gracias 💪",
+    },
+    {
+      name: "MIGUEL LOZANO",
+      text: "He entrenado durante años con muchos profesionales y Fran y su equipo son sin duda de lo mejor que puedes encontrar. No sólo desde un conocimiento profundo del entrenamiento deportivo si no también en psicología deportiva y motivación. Buena planificación y variedad de entrenamientos adaptados a tus necesidades. Sin duda unos profesionales",
+    },
+    {
+      name: "RAQUEL LINARES",
+      text: "Mi experiencia con Walk on y con Fran como entrenador esta siendo muy buena , nunca habia sido constante con el deporte y lo estoy consiguiendo, gracias a los entrenos específicos, teniendo en cuenta las necesidades individuales con la sabiduría y profesionalidad que lo caracteriza . ",
+    },
+  ];
+
   return (
     <main className="absolute w-screen flex flex-col justify-center items-center  bg-[rgb(20,20,20)] text-white overflow-hidden">
       <section className="header w-[90vw] mt-20 p-5 flex flex-wrap items-center justify-around ">
@@ -175,7 +214,7 @@ export default function Home() {
       </section>
       <section className="w-[95vw] flex">
         <div className="flex flex-wrap justify-center xl:justify-between p-5">
-          <div className="w-full  flex flex-col  gap-5 ">
+          <div className="w-full h-80 mb-10   flex flex-col  justify-between ">
             <h3 className="text-2xl font-bold ">SERVICIOS.</h3>
             <span>
               <h2 className="text-4xl italic">
@@ -243,11 +282,13 @@ export default function Home() {
                 className="w-[85vw] h-96 object-cover"
               />
             </div>
-            <div className="w-96 md:w-60 h-96 flex flex-col font-medium italic py-10">
-              <h2 className="text-4xl">
-                COMIENZA HOY TU CAMBIO FÍSICO EN WALK ON FITNESS
-              </h2>
-              <div className="w-full mt-20">
+            <div className="w-96 md:w-full h-60 flex flex-col font-medium italic py-10">
+              <span>
+                <h2 className="text-4xl">
+                  COMIENZA HOY TU CAMBIO FÍSICO EN WALK ON FITNESS
+                </h2>
+              </span>
+              <div className="w-full xl:mt-20 mt-10">
                 <button className="w-48 mt-5 sm:-mt-96 rounded-md overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
                   <div className=" buttonServices ">
                     <h3 className="text-2xl -mt-1">¡Comencemos!</h3>
@@ -258,9 +299,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-[90vw] flex flex-col md:text-start text-center">
-        <div className="w-[90vw] h-72 flex gap-5 flex-col justify-center items-center">
-          <h3 className="text-2xl font-bold ">ASÍ MES COMO LO HACEMOS</h3>
+      <section className="w-[90vw] flex flex-col mt-10 md:text-start text-center">
+        <div className="w-[90vw] h-72 flex gap-5 flex-col justify-center xl:justify-start xl:items-start items-center">
+          <h3 className="text-2xl font-bold ">ASÍ ES COMO LO HACEMOS</h3>
           <span>
             <h2 className="italic text-5xl">¿POR DONDE EMPEZAMOS?</h2>
           </span>
@@ -270,27 +311,33 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full flex  justify-center flex-wrap">
-          <div className="w-96 h-60 flex flex-col gap-5 justify-center items-center border m-2 p-5">
-            <span><h2 className="text-xl h-10">ENTREVISTA PERSONAL</h2></span>
-            <p>
+          <div className="w-96 h-60 flex flex-col gap-5 justify-center items-center border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px] shadow-amber-700  m-2 p-5">
+            <span>
+              <h2 className="text-xl h-10">ENTREVISTA PERSONAL</h2>
+            </span>
+            <p className="h-40">
               Dónde analizamos tus objetivos y motivaciones (perdida de peso,
               ganancia de masa muscular, prueba deportiva, oposiciones...) y
               conocemos tu posible historial de lesiones, asi como tu
               experiencia previa en el ámbito del entrenamiento.
             </p>
           </div>
-          <div className="w-96 h-60 flex flex-col  gap-5 justify-center items-center  border m-2 p-5">
-            <span><h2 className="text-xl h-10">VALORACIÓN FUNCIONAL</h2></span>
-            <p>
+          <div className="w-96 h-60 flex flex-col  gap-5 justify-center items-center  border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px]  m-2 p-5">
+            <span>
+              <h2 className="text-xl h-10">VALORACIÓN FUNCIONAL</h2>
+            </span>
+            <p className="h-40">
               Defendemos la calidad de movimiento, “primero muévete bien,
               despues muévete mucho, Gray Cook” , con esta valoración conocemos
               los posibles desequilibrios, asimetrías, déficit de control motor
               o de fuerza.
             </p>
           </div>
-          <div className="w-96 flex flex-col gap-5 justify-center items-center  h-60 border m-2 p-5">
-            <span><h2 className="text-xl h-10">ESTAMOS LISTOS</h2></span>
-            <p>
+          <div className="w-96 flex flex-col gap-5 justify-center items-center  h-60 border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px]  m-2 p-5">
+            <span>
+              <h2 className="text-xl h-10">ESTAMOS LISTOS</h2>
+            </span>
+            <p className="h-40">
               Bien de forma presencial o de forma on line, con toda la
               información prevía, habremos desarrollado una hoja de ruta, lo que
               llamamos programación, con la cual nos acercaremos a la
@@ -298,6 +345,86 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </section>
+      <section className="w-[90vw]  h-[600px] relative flex justify-center items-center my-20 bg-red-200 overflow-hidden">
+        <img
+          src={arryImg[count]}
+          alt=""
+          className="images w-72 md:w-full xl:w-full   h-[600px] object-cover absolute z-[10] brightness-[0.5]"
+        />
+        <div className="relative z-[50] w-10/12 h-96 flex flex-col items-center justify-center gap-5 ">
+          <h3 className="text-3xl">TESTIMONIOS</h3>
+          <span>
+            <h2 className="w-full text-xl md:text-3xl text-center xl:text-5xl font-extrabold italic">
+              LO QUE OPINAN NUESTROS CLIENTES
+            </h2>
+          </span>
+          <div className="w-[10/12] md:w-1/2 h-96 bg-slate-800 p-5 flex text-start gap-5 flex-col items-start justify-center">
+            <p className="text-[1em] ">{comments[count].text}</p>
+            <span>
+              <h3>{comments[count].name}</h3>
+            </span>
+          </div>
+        </div>
+      </section>
+      <div className="w-[90vw] pb-10 flex flex-col gap-5">
+        <h3>CONTACTO</h3>
+        <span>
+          <h2 className="text-xl xl:text-5xl italic">¡COMENCEMOS EL ENTRENAMIENTO!</h2>
+        </span>
+        <p>
+          ¿Listo para comenzar una vida más saludable? Contáctanos hoy mismo
+          para programar una consulta o para obtener más información sobre
+          nuestros servicios. Estamos aquí para ayudarte.
+        </p>
+      </div>
+      <section className="w-[90vw] xl:w-6/12 flex flex-col gap-5 md:p-20 p-5 bg-slate-600">
+        <span>
+          <h2 className="text-xl ">ENVIANOS UN CORREO DESDE AQUÍ</h2>
+        </span>
+        <form action="" className="text-black"></form>
+        <input
+          type="text"
+          placeholder="Nombre"
+          className="text-black shadow-md shadow-orange-600 bg-slate-500  rounded-b-md"
+        />
+        <input
+          type="text"
+          placeholder="Correo electrónico"
+          className="text-black shadow-md shadow-orange-600 bg-slate-500   rounded-b-md"
+        />
+        <textarea
+          type="text"
+          className="text-black shadow-md shadow-orange-600 bg-slate-500   rounded-b-md"
+          placeholder="Mensaje"
+        />
+        <div className="w-full mt-5">
+          <button className="w-28 mt-5 sm:-mt-96 rounded-md overflow-hidden h-7 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
+            <div>
+              <h3 className="text-xl -mt-1">Enviar</h3>
+            </div>
+          </button>
+        </div>
+      </section>
+      <section className="w-[90vw] h-screen  text-xl">
+        <div>
+          <div className="text-xl">
+            <div>
+              <span>
+                <h2 className="text-xl">INFORMACIÓN</h2>
+              </span>
+              <p>Carrer Matas, 88, local 2, 08391 Tiana, Barcelona</p>
+              <p>(+34) 931 74 68 67</p>
+              <p>info@walkonfitness.es</p>
+            </div>
+            <span>
+              <h2 className="text-xl">HORARIO</h2>
+            </span>
+            <p>Lun. – Viern.: 8.00 – 14.00 // 16:00 – 21:00</p>
+          </div>
+          <div></div>
+        </div>
+        <div></div>
       </section>
     </main>
   );
