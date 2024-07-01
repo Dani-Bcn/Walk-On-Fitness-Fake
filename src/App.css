@@ -4,7 +4,6 @@
 
 * {
   transition: all;
-  transition-duration: 0.3s;
 }
 
 html {
@@ -19,6 +18,8 @@ span {
 }
 li {
   cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
 }
 li:hover {
   color: aliceblue;

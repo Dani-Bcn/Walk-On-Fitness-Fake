@@ -25,6 +25,11 @@ import {
 } from "react-scroll";
 
 export default function Home() {
+  const [activeNutricion, setActiveNutricion] = useState(false);
+  const [activePersonal, setActivePersonal] = useState(false);
+  const [activeProfesional, setActiveProfesional] = useState(false);
+  const [activeEmpresas, setActiveEmpresas] = useState(false);
+  const [activeFisio, setActiveFisio] = useState(false);
   useEffect(() => {
     gsap.to(".years", {
       scrollTrigger: {
@@ -107,10 +112,19 @@ export default function Home() {
     },
   ];
 
+  useEffect(() => {
+    console.log(activePersonal);
+  }, [activePersonal]);
+
   return (
-    <main className="absolute w-screen flex flex-col justify-center items-center  bg-[rgb(20,20,20)] text-white overflow-hidden">
-      <section className="header w-[90vw] mt-20 p-5 flex flex-wrap items-center justify-around ">
-        <div className="flex flex-col justify-between w-full h-full sm:w-1/2 ">
+    <main className=" w-screen flex flex-col justify-center items-center   text-white overflow-hidden">
+      <section className="inicio header w-[90vw] mt-20 p-5 flex flex-wrap items-center justify-around ">
+        <img
+          src={back_Img}
+          alt="img-back"
+          className="absolute w-screen h-screen -mt-28 brightness-[0.35] blur-[2px] object-cover z-[50]"
+        />
+        <div className="relative flex flex-col justify-between w-full h-full sm:w-1/2 z-[150] ">
           <h3>PEQUEÑOS CAMBIOS, GRANDES RESULTADOS.</h3>
           <h2 className="italic">
             <span>WALK ON</span> FITNESS
@@ -122,7 +136,7 @@ export default function Home() {
             forma física.
           </p>
         </div>
-        <div className=" w-1/2  flex flex-col  justify-start ">
+        <div className="z-[150] w-1/2  flex flex-col  justify-start ">
           <div className="flex flex-col  justify-center  items-center  font-bold ">
             <span className="flex">
               <h2 className="years z-[100]"></h2>
@@ -147,7 +161,7 @@ export default function Home() {
             <h2 className="text-2xl italic">ENTRENAMIENTOS REALIZADOS</h2>
           </div>
         </div>
-        <div className="w-full mt-5">
+        <div className="w-full relative z-[150]">
           <button className="w-32 mt-5 sm:-mt-96 rounded-md overflow-hidden h-10 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
             <div className=" buttonServices ">
               <h3 className="text-2xl -mt-1">Servicios</h3>
@@ -155,7 +169,7 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-[90vw] relative   flex flex-wrap">
+      <section className="w-[90vw] equipo relative mt-20   flex flex-wrap">
         <div className="w-full sm:w-1/2">
           <img
             src={athletic_female}
@@ -228,7 +242,11 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center md:justify-start gap-3 1/4 py-5">
-            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+            <div
+              onPointerOver={() => setActivePersonal(true)}
+              onPointerOut={() => setActivePersonal(false)}
+              className="overflow-hidden relative w-96 md:w-60 flex flex-col font-medium italic"
+            >
               <h3>
                 ENTRENAMIENTO
                 <br /> PERSONAL
@@ -238,8 +256,34 @@ export default function Home() {
                 alt="athletic_woman"
                 className=" w-[85vw] h-96 object-cover"
               />
+              <m.div
+                animate={activePersonal ? { y: 0 } : { y: 450 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.5,
+                  x: { duration: 1 },
+                }}
+                className="absolute w-full h-full opacity-100  bg-gradient-to-t from-[#141414] to-black/[0.2]"
+              ></m.div>
+              <m.div
+                animate={
+                  activePersonal
+                    ? { y: 150, opacity: 1 }
+                    : { y: 200, opacity: 0 }
+                }
+                transition={{ duration: 0.5 }}
+                className="absolute w-full h-full opacity-0 text-center p-2  "
+              >
+                LAS SESIONES SE DESARROLLAN DE FORMA PERSONAL, “ONE TO ONE”, UN
+                CLIENTE CON UN ENTRENADOR. ESTE SERVICIO INCLUYE EL
+                ASESORAMIENTO NUTRICIONAL.
+              </m.div>
             </div>
-            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+            <div
+              onPointerOver={() => setActiveProfesional(true)}
+              onPointerOut={() => setActiveProfesional(false)}
+              className="overflow-hidden relative w-96 md:w-60 flex flex-col font-medium italic"
+            >
               <h3>
                 ENTRENAMIENTO
                 <br /> SEMIPROFESIONAL
@@ -247,10 +291,36 @@ export default function Home() {
               <img
                 src={couple_cross}
                 alt="athletic_woman"
-                className="w-[85vw] h-96 object-cover"
+                className=" w-[85vw] h-96 object-cover"
               />
+              <m.div
+                animate={activeProfesional ? { y: 0 } : { y: 450 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.5,
+                  x: { duration: 1 },
+                }}
+                className="absolute w-full h-full opacity-100  bg-gradient-to-t from-[#141414] to-black/[0.2]"
+              ></m.div>
+              <m.div
+                animate={
+                  activeProfesional
+                    ? { y: 150, opacity: 1 }
+                    : { y: 200, opacity: 0 }
+                }
+                transition={{ duration: 0.5 }}
+                className="absolute w-full h-full opacity-0 text-center p-2  "
+              >
+                LAS SESIONES SE DESARROLLAN CON UN GRUPO DE 4 PERSONAS Y UN
+                ENTRENADOR. CADA PERSONA DESARROLLA SU PROGRAMA DE ENTRENAMIENTO
+                INDIVIDUALIZADO.
+              </m.div>
             </div>
-            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+            <div
+              onPointerOver={() => setActiveNutricion(true)}
+              onPointerOut={() => setActiveNutricion(false)}
+              className="overflow-hidden relative w-96 md:w-60 flex flex-col font-medium italic"
+            >
               <h3>
                 NUTRICIÓN
                 <br />
@@ -259,30 +329,97 @@ export default function Home() {
               <img
                 src={fliying_ingredients}
                 alt="athletic_woman"
-                className="w-[85vw] h-96 object-cover"
+                className=" w-[85vw] h-96 object-cover"
               />
+              <m.div
+                animate={activeNutricion ? { y: 0 } : { y: 450 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.5,
+                  x: { duration: 1 },
+                }}
+                className="absolute w-full h-full opacity-100  bg-gradient-to-t from-[#141414] to-black/[0.2]"
+              ></m.div>
+              <m.div
+                animate={
+                  activeNutricion
+                    ? { y: 150, opacity: 1 }
+                    : { y: 200, opacity: 0 }
+                }
+                transition={{ duration: 0.5 }}
+                className="absolute w-full h-full opacity-0 text-center p-2  "
+              >
+                DIETA PERSONALIZADA, REALIZADA A PARTIR DE UNA VALORACIÓN DE
+                ANALITICAS,SI SE DISPONE, ESTUDIOS DE COMPOSICIÓN CORPORAL.
+              </m.div>
             </div>
-            <div className="w-96 md:w-60 flex flex-col font-medium italic">
+            <div
+              onPointerOver={() => setActiveEmpresas(true)}
+              onPointerOut={() => setActiveEmpresas(false)}
+              className="overflow-hidden relative w-96 md:w-60 flex flex-col font-medium italic"
+            >
               <h3>EMPRESAS SALUDABLES-CORPORATE WELLNESS</h3>
               <img
                 src={cheerful_young}
                 alt="athletic_woman"
-                className="w-[85vw] h-96 object-cover"
+                className=" w-[85vw] h-96 object-cover"
               />
+              <m.div
+                animate={activeEmpresas ? { y: 0 } : { y: 450 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.5,
+                  x: { duration: 1 },
+                }}
+                className="absolute w-full h-full opacity-100  bg-gradient-to-t from-[#141414] to-black/[0.2]"
+              ></m.div>
+              <m.div
+                animate={
+                  activeEmpresas
+                    ? { y: 100, opacity: 1 }
+                    : { y: 200, opacity: 0 }
+                }
+                transition={{ duration: 0.5 }}
+                className="absolute w-full h-full opacity-0 text-center p-2  "
+              >
+                LOS BENEFICIOS DE LA ACTIVIDAD FÍSICA, INTEGRADA EN EL ÁMBITO
+                LABORAL. LAS GRANDES COMPAÑIAS DESDE HACE DECADAS IMPLEMENTAN
+                PROGRAMAS DE SALUD PARA SUS EMPLEADOS, CON EL FIN DE MEJORAR SU
+                PRODUCTIVIDAD Y RETENER TALENTO.
+              </m.div>
             </div>
-            <div className="w-96 md:w-60 flex flex-col font-medium italic">
-              <h3>
-                FISIOTERAPIA
-                <br />
-                <br />
-              </h3>
+            <div
+              onPointerOver={() => setActiveFisio(true)}
+              onPointerOut={() => setActiveFisio(false)}
+              className="overflow-hidden relative w-96 md:w-60 flex flex-col font-medium italic"
+            >
+              <h3>FISIOTERAPIA</h3>
+              <br />
               <img
                 src={img_fisioterapia}
                 alt="athletic_woman"
-                className="w-[85vw] h-96 object-cover"
+                className=" w-[85vw] h-96 object-cover"
               />
+              <m.div
+                animate={activeFisio ? { y: 0 } : { y: 450 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.5,
+                  x: { duration: 1 },
+                }}
+                className="absolute w-full h-full opacity-100  bg-gradient-to-t from-[#141414] to-black/[0.2]"
+              ></m.div>
+              <m.div
+                animate={
+                  activeFisio ? { y: 200, opacity: 1 } : { y: 0, opacity: 0 }
+                }
+                transition={{ duration: 0.5 }}
+                className="absolute w-full h-full opacity-0 text-center p-2  "
+              >
+                FISIOTERAPIA
+              </m.div>
             </div>
-            <div className="w-96 md:w-full h-60 flex flex-col font-medium italic py-10">
+            <div className="w-96 md:w-full h-60 md:h-44 flex flex-col font-medium italic py-10">
               <span>
                 <h2 className="text-4xl">
                   COMIENZA HOY TU CAMBIO FÍSICO EN WALK ON FITNESS
@@ -300,7 +437,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-[90vw] flex flex-col mt-10 md:text-start text-center">
-        <div className="w-[90vw] h-72 flex gap-5 flex-col justify-center xl:justify-start xl:items-start items-center">
+        <div className="w-[90vw] h-72 md:h-52 flex gap-5 flex-col justify-center xl:justify-start xl:items-start items-center">
           <h3 className="text-2xl font-bold ">ASÍ ES COMO LO HACEMOS</h3>
           <span>
             <h2 className="italic text-5xl">¿POR DONDE EMPEZAMOS?</h2>
@@ -311,7 +448,7 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full flex  justify-center flex-wrap">
-          <div className="w-96 h-60 flex flex-col gap-5 justify-center items-center border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px] shadow-amber-700  m-2 p-5">
+          <div className="w-96 h-60 flex flex-col gap-5 justify-center items-center border border-slate-600 rounded-xl   hover:shadow-[0px_5px_10px] transition-all hover:shadow-amber-700  m-2 p-5">
             <span>
               <h2 className="text-xl h-10">ENTREVISTA PERSONAL</h2>
             </span>
@@ -322,7 +459,7 @@ export default function Home() {
               experiencia previa en el ámbito del entrenamiento.
             </p>
           </div>
-          <div className="w-96 h-60 flex flex-col  gap-5 justify-center items-center  border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px]  m-2 p-5">
+          <div className="w-96 h-60 flex flex-col  gap-5 justify-center items-center  border border-slate-600 rounded-xl hover:shadow-amber-700   hover:shadow-[0px_5px_10px] transition-all  m-2 p-5">
             <span>
               <h2 className="text-xl h-10">VALORACIÓN FUNCIONAL</h2>
             </span>
@@ -333,7 +470,7 @@ export default function Home() {
               o de fuerza.
             </p>
           </div>
-          <div className="w-96 flex flex-col gap-5 justify-center items-center  h-60 border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px]  m-2 p-5">
+          <div className="w-96 flex flex-col gap-5 justify-center items-center  h-60 border border-slate-600 rounded-xl  hover:shadow-[0px_5px_10px] hover:shadow-amber-700 transition-all  m-2 p-5">
             <span>
               <h2 className="text-xl h-10">ESTAMOS LISTOS</h2>
             </span>
@@ -346,7 +483,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-[90vw]  h-[600px] relative flex justify-center items-center my-20 bg-red-200 overflow-hidden">
+      <section className="w-[90vw]  h-[600px] relative flex justify-center items-center my-20 overflow-hidden">
         <img
           src={arryImg[count]}
           alt=""
@@ -370,7 +507,9 @@ export default function Home() {
       <div className="w-[90vw] pb-10 flex flex-col gap-5">
         <h3>CONTACTO</h3>
         <span>
-          <h2 className="text-xl xl:text-5xl italic">¡COMENCEMOS EL ENTRENAMIENTO!</h2>
+          <h2 className="text-xl xl:text-5xl italic">
+            ¡COMENCEMOS EL ENTRENAMIENTO!
+          </h2>
         </span>
         <p>
           ¿Listo para comenzar una vida más saludable? Contáctanos hoy mismo
@@ -378,35 +517,37 @@ export default function Home() {
           nuestros servicios. Estamos aquí para ayudarte.
         </p>
       </div>
-      <section className="w-[90vw] xl:w-6/12 flex flex-col gap-5 md:p-20 p-5 bg-slate-600">
-        <span>
-          <h2 className="text-xl ">ENVIANOS UN CORREO DESDE AQUÍ</h2>
-        </span>
-        <form action="" className="text-black"></form>
-        <input
-          type="text"
-          placeholder="Nombre"
-          className="text-black shadow-md shadow-orange-600 bg-slate-500  rounded-b-md"
-        />
-        <input
-          type="text"
-          placeholder="Correo electrónico"
-          className="text-black shadow-md shadow-orange-600 bg-slate-500   rounded-b-md"
-        />
-        <textarea
-          type="text"
-          className="text-black shadow-md shadow-orange-600 bg-slate-500   rounded-b-md"
-          placeholder="Mensaje"
-        />
-        <div className="w-full mt-5">
-          <button className="w-28 mt-5 sm:-mt-96 rounded-md overflow-hidden h-7 text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]">
-            <div>
-              <h3 className="text-xl -mt-1">Enviar</h3>
-            </div>
+      <section className="w-[90vw] py-10 flex justify-center items-center">
+        <form
+          action=""
+          className='w-[600px] h-[450px] flex flex-col bg-[url("/assets/bg.jpg")] p-10 gap-10'
+        >
+          <h2 className="text-3xl italic text-orange-400">
+            ENVIANOS UN CORREO DESDE AQUÍ
+          </h2>
+          <input
+            type="text"
+            placeholder="Nombre"
+            className="bg-slate-600 opacity-80"
+          />
+          <input
+            type="text"
+            placeholder="Correo electrónico"
+            className="bg-slate-600 opacity-80"
+          />
+          <textarea
+            placeholder="Mensaje"
+            className="h-32 bg-slate-600 opacity-80 flex items-start justify-start"
+          />
+          <button
+            type="button"
+            className="w-24 h-16 rounded-md   text-white hover:shadow-[0px_0px_25px] shadow-white hover:text-orange-400 hover:bg-white italic text-3xl bg-orange-400   transiton-all duration-500 z-[75]"
+          >
+            <h3 className="text-xl  font-bold">Enviar</h3>
           </button>
-        </div>
+        </form>
       </section>
-      <section className="w-[90vw] h-screen  text-xl">
+      <section className="w-[90vw] mb-10 text-xl">
         <div>
           <div className="text-xl">
             <div>

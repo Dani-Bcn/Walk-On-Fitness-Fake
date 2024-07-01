@@ -15,7 +15,7 @@ const [menuResp, setMenuResp]= useState(false)
   return (
     <main >
       <Navbar  activeMenuResp={activeMenuResp}  menuResp={menuResp}/> 
-   {/*    <NavbarResp menuResp={menuResp} activeMenuResp={activeMenuResp} /> */}
+   <NavbarResp menuResp={menuResp} activeMenuResp={activeMenuResp} /> 
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

@@ -18,12 +18,12 @@ export default function NavbarResp(props) {
   return (
     <m.main
       animate={menuResp ?
-         { x: 1400 } : { x: 0 }}
+         { x:0 } : { x: -400 }}
          transition={{
             duration:1,
             ease:"backInOut"
          }}
-      className="fixed -ml-[1400px] w-screen h-screen overflow-hidden p-20 bg-[rgb(20,20,20)] z-[200]"
+      className="fixed w-screen h-screen overflow-hidden p-20 bg-[rgb(20,20,20)] z-[200]"
     >
       <div className="scale-[1.5] mt-40 relative w-full flex  flex-col gap-5  p-5">
         <h3 className="text-orange-400 font-bold border-b">MENÚ</h3>
@@ -37,7 +37,7 @@ export default function NavbarResp(props) {
               smooth={true}
               duration={500}
             >
-              <li  onClick={()=> activeMenuResp(!menuResp)}>INICIO</li>
+              <li onClick={()=> activeMenuResp(!menuResp)}>INICIO</li>
             </Link>
           </div>
           <div 
