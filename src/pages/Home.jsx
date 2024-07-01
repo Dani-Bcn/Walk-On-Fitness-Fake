@@ -118,7 +118,7 @@ export default function Home() {
 
   return (
     <main className=" w-screen flex flex-col justify-center items-center   text-white overflow-hidden">
-      <section className="inicio header w-[90vw] mt-20 p-5 flex flex-wrap items-center justify-around ">
+      <section className="inicio header w-[90vw] md:mt-20 p-5 flex flex-wrap items-center justify-around ">
         <img
           src={back_Img}
           alt="img-back"
@@ -169,7 +169,7 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-[90vw] equipo relative mt-20   flex flex-wrap">
+      <section className="w-[90vw] equipo relative mt-40   flex flex-wrap">
         <div className="w-full sm:w-1/2">
           <img
             src={athletic_female}
@@ -226,7 +226,7 @@ export default function Home() {
           <h5 className="absolute -mt-24">500</h5>
         </div>
       </section>
-      <section className="w-[95vw] flex">
+      <section className="  servicios w-[95vw] flex">
         <div className="flex flex-wrap justify-center xl:justify-between p-5">
           <div className="w-full h-80 mb-10   flex flex-col  justify-between ">
             <h3 className="text-2xl font-bold ">SERVICIOS.</h3>
@@ -436,7 +436,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-[90vw] flex flex-col mt-10 md:text-start text-center">
+      <section className="w-[90vw] hacemos flex flex-col mt-10 md:text-start text-center">
         <div className="w-[90vw] h-72 md:h-52 flex gap-5 flex-col justify-center xl:justify-start xl:items-start items-center">
           <h3 className="text-2xl font-bold ">ASÍ ES COMO LO HACEMOS</h3>
           <span>
@@ -483,7 +483,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-[90vw]  h-[600px] relative flex justify-center items-center my-20 overflow-hidden">
+      <section className="w-[90vw] testimonios  h-[600px] relative flex justify-center items-center my-20 overflow-hidden">
         <img
           src={arryImg[count]}
           alt=""
@@ -504,7 +504,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-[90vw] pb-10 flex flex-col gap-5">
+      <div className="contacto w-[90vw] pb-10 flex flex-col gap-5">
         <h3>CONTACTO</h3>
         <span>
           <h2 className="text-xl xl:text-5xl italic">
@@ -517,7 +517,7 @@ export default function Home() {
           nuestros servicios. Estamos aquí para ayudarte.
         </p>
       </div>
-      <section className="w-[90vw] py-10 flex justify-center items-center">
+      <section className="  w-[90vw] py-10 flex justify-center items-center">
         <form
           action=""
           className='w-[600px] h-[450px] flex flex-col bg-[url("/assets/bg.jpg")] p-10 gap-10'
