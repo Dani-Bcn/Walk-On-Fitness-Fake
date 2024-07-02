@@ -169,7 +169,7 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-[90vw] equipo relative mt-40   flex flex-wrap">
+      <section className="w-[90vw] equipo relative mt-20 flex flex-wrap">
         <div className="w-full sm:w-1/2">
           <img
             src={athletic_female}
