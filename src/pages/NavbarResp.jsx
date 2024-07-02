@@ -25,7 +25,7 @@ export default function NavbarResp(props) {
   return (
     <main>     
       <m.div
-        animate={menuResp ? { x: -400 } : { x: 0 }}
+        animate={menuResp ? { x: 400 } : { x: 0 }}
         transition={{
           duration: 1,
           ease: "backInOut",
