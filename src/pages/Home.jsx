@@ -118,13 +118,13 @@ export default function Home() {
 
   return (
     <main className=" w-screen flex flex-col justify-center items-center   text-white overflow-hidden">
-      <section className="inicio header w-[90vw] md:mt-20 p-5 flex flex-wrap items-center justify-around ">
+      <section className="inicio header w-[90vw] md:mt-20  p-5 flex flex-wrap items-center justify-around ">
         <img
           src={back_Img}
           alt="img-back"
-          className="absolute w-screen h-screen -mt-28 brightness-[0.35] blur-[2px] object-cover z-[50]"
+          className="absolute w-screen h-screen -mt-48 brightness-[0.35] blur-[2px] object-cover z-[50]"
         />
-        <div className="relative flex flex-col justify-between w-full h-full sm:w-1/2 z-[150] ">
+        <div className="relative flex flex-col justify-between w-full h-full mt-20 sm:w-1/2 z-[150] ">
           <h3>PEQUEÑOS CAMBIOS, GRANDES RESULTADOS.</h3>
           <h2 className="italic">
             <span>WALK ON</span> FITNESS
@@ -547,7 +547,7 @@ export default function Home() {
           </button>
         </form>
       </section>
-      <section className="w-[90vw] mb-10 text-xl">
+      <footer className="w-[90vw] mb-10 text-xl">
         <div>
           <div className="text-xl">
             <div>
@@ -565,8 +565,11 @@ export default function Home() {
           </div>
           <div></div>
         </div>
-        <div></div>
-      </section>
+        <div>
+          <h2 className="text-xl text-red-600">web : daniperez.a.bcn@gmail.com</h2>
+        </div>
+
+      </footer>
     </main>
   );
 }
