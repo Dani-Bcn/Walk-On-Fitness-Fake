@@ -565,8 +565,8 @@ export default function Home() {
           </div>
           <div></div>
         </div>
-        <div>
-          <h2 className="text-xl text-red-600">web : daniperez.a.bcn@gmail.com</h2>
+        <div className="w-[90vw] flex justify-center my-5">
+          <h2 className="text-xl text-red-600 ">web : daniperez.a.bcn@gmail.com</h2>
         </div>
 
       </footer>
