@@ -25,12 +25,12 @@ export default function NavbarResp(props) {
   return (
     <main>     
       <m.div
-        animate={menuResp ? { x: 400 } : { x: 0 }}
+        animate={menuResp ? { x: 1400 } : { x: 0 }}
         transition={{
           duration: 1,
           ease: "backInOut",
         }}
-        className="fixed w-screen h-screen -ml-[400px] overflow-hidden p-20 bg-[rgb(20,20,20)] z-[200]"
+        className="fixed w-screen h-screen -ml-[1400px] overflow-hidden p-20 bg-[rgb(20,20,20)] z-[200]"
       >
         <div className="scale-[1.5] mt-40 relative w-full flex  flex-col gap-5  p-5">
           <h3 className="text-orange-400 font-bold border-b">MENÚ</h3>
